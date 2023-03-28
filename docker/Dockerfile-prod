@@ -1,6 +1,6 @@
 FROM python:alpine
 
-RUN echo
+RUN touch /root/file.txt
 RUN apk update && apk upgrade
 
 COPY ./requirements.txt /requirements.txt
