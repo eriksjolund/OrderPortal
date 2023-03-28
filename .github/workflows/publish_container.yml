@@ -6,7 +6,7 @@ on:
 
 jobs:
   push_to_registry:
-    if: github.repository == 'pekrau/orderportal'
+    if: github.repository == 'eriksjolund/orderportal'
     name: Publish Docker image
     runs-on: ubuntu-latest
     permissions:
