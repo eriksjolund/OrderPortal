@@ -1,5 +1,6 @@
 FROM python:alpine
 
+RUN echo
 RUN apk update && apk upgrade
 
 COPY ./requirements.txt /requirements.txt
