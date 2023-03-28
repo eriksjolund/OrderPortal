@@ -1,9 +1,9 @@
 name: Publish Docker image
 
 on:
-  release:
-    types: [published]
-
+  push:
+    branches:
+      -  fixcontainerbuild
 jobs:
   push_to_registry:
     if: github.repository == 'eriksjolund/orderportal'
@@ -41,7 +41,7 @@ jobs:
         with:
           file: docker/Dockerfile-prod
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64
