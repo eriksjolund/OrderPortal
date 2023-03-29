@@ -9,7 +9,7 @@ jobs:
     if: github.repository == 'eriksjolund/orderportal'
     name: Publish Docker image
     runs-on: ubuntu-latest
-##    permissions:
+###    permissions:
 #      contents: read
 #      packages: write
     steps:
